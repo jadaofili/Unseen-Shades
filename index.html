@@ -1,78 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Unseen Shades</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
   <style>
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: 'Inter', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #fff8f5;
-      color: #333;
-      line-height: 1.6;
+      background-color: #fffdfc;
+      color: #2e2e2e;
+      line-height: 1.8;
+      scroll-behavior: smooth;
     }
     header {
-      background-color: #000;
-      color: #fff;
-      padding: 1.5rem 1rem;
+      background: linear-gradient(to right, #fad0c4, #ffd1ff);
+      padding: 3rem 1rem 2rem;
       text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      color: #422800;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+      color: #5c3a2e;
     }
     nav {
       margin-top: 1rem;
     }
     nav a {
-      color: #fff;
-      margin: 0 0.5rem;
+      color: #5c3a2e;
+      margin: 0 1rem;
       text-decoration: none;
-      font-weight: 500;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    nav a:hover {
+      text-decoration: underline;
     }
     section {
-      padding: 2rem 1rem;
-      max-width: 900px;
-      margin: 0 auto;
+      max-width: 1000px;
+      margin: auto;
+      padding: 3rem 1.5rem;
     }
     .highlight {
-      background-color: #ffe4e1;
-      padding: 1rem;
-      border-left: 5px solid #d2691e;
-      border-radius: 5px;
-    }
-    .brand-scorecard, .testimonial, .get-involved {
-      background: #fff;
-      margin: 1.5rem 0;
-      padding: 1rem;
+      background-color: #fff0f4;
+      padding: 2rem;
+      border-left: 6px solid #e39ba8;
       border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
     }
-    .brand-scorecard img, .testimonial img {
-      max-width: 100%;
-      border-radius: 8px;
-      margin-bottom: 1rem;
+    .hero {
+      width: 100%;
+      max-height: 450px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-top: 1.5rem;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
     }
     h2 {
-      color: #333;
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #3b2e2e;
+      border-bottom: 2px solid #f9c5d1;
+      display: inline-block;
+    }
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 2rem;
+      margin: 2rem 0;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+    .get-involved a {
+      color: #a14b64;
+      font-weight: bold;
+      text-decoration: underline;
     }
     footer {
-      background-color: #222;
-      color: #fff;
+      background-color: #fae1dd;
+      color: #3d2c29;
       text-align: center;
-      padding: 1rem;
-      margin-top: 3rem;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      margin-top: 4rem;
+      border-top: 2px solid #f9c5d1;
     }
     @media (max-width: 600px) {
-      nav a {
-        display: block;
-        margin: 0.5rem 0;
-      }
-      section {
-        padding: 1rem;
-      }
+      header h1 { font-size: 2rem; }
+      nav a { display: block; margin: 0.5rem 0; }
+      section { padding: 2rem 1rem; }
     }
   </style>
 </head>
@@ -91,51 +123,51 @@
   <section id="about">
     <h2>Why Shade Inclusivity Matters</h2>
     <div class="highlight">
-      <p>People of color often struggle to find beauty products that match their skin tone. This isn’t just inconvenient—it’s exclusionary. Our site highlights the companies doing the work and calls out those falling short.</p>
+      <p>The beauty industry has long excluded people of color by offering limited foundation shades that do not reflect the diversity of real skin tones. This site challenges that norm, promotes awareness, and encourages both brands and consumers to prioritize representation and equity in beauty.</p>
     </div>
-    <img src="https://images.unsplash.com/photo-1613145995939-53e1e81617db" alt="Makeup shades" style="width:100%; margin-top: 1rem; border-radius: 10px;">
+    <img class="hero" src="https://images.pexels.com/photos/3771830/pexels-photo-3771830.jpeg" alt="Inclusive beauty campaign">
   </section>
 
   <section id="scorecard">
     <h2>Brand Scorecard</h2>
-    <div class="brand-scorecard">
-      <img src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e3/Fenty_Beauty_logo.svg/1920px-Fenty_Beauty_logo.svg.png" alt="Fenty Beauty logo">
+    <div class="card">
+      <img src="https://images.pexels.com/photos/5938635/pexels-photo-5938635.jpeg" alt="Fenty Beauty inclusive products">
       <h3>Fenty Beauty</h3>
-      <p>Score: ★★★★★ — Known for launching with 40+ shades, setting a new industry standard.</p>
+      <p>★★★★★ — Known for launching with 40+ shades, setting a new standard for shade diversity across the beauty industry.</p>
     </div>
-    <div class="brand-scorecard">
+    <div class="card">
+      <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg" alt="Limited shades example">
       <h3>Tarte</h3>
-      <p>Score: ★★☆☆☆ — Historically criticized for lack of deeper shades.</p>
+      <p>★★☆☆☆ — Criticized for minimal representation and failing to cater to deeper skin tones.</p>
     </div>
-    <div class="brand-scorecard">
+    <div class="card">
+      <img src="https://images.pexels.com/photos/4842346/pexels-photo-4842346.jpeg" alt="Maybelline products">
       <h3>Maybelline</h3>
-      <p>Score: ★★★★☆ — Affordable and relatively inclusive drugstore option.</p>
+      <p>★★★★☆ — A drugstore brand making progress with more inclusive shade ranges and better availability.</p>
     </div>
   </section>
 
   <section id="voices">
     <h2>Consumer Voices</h2>
-    <div class="testimonial">
-      <p><strong>Anonymous:</strong> "I’ve been wearing makeup for 10 years and still struggle to find a perfect match. It’s frustrating to feel invisible."
-      </p>
+    <div class="card">
+      <p><strong>Anonymous:</strong> "I’ve been wearing makeup for 10 years and still struggle to find a perfect match. It’s frustrating to feel invisible. It’s more than makeup—it's about belonging."</p>
     </div>
-    <div class="testimonial">
-      <p><strong>Brianna, 22:</strong> "Fenty was the first time I felt seen in the beauty aisle. Other brands need to catch up."
-      </p>
+    <div class="card">
+      <p><strong>Brianna, 22:</strong> "Fenty was the first time I felt seen in the beauty aisle. Other brands need to catch up. We shouldn’t be grateful for the bare minimum."</p>
     </div>
   </section>
 
   <section id="involved">
     <h2>Get Involved</h2>
-    <div class="get-involved">
-      <p>📢 Use the hashtag <strong>#WhereIsMyShade</strong> to share your experiences and tag brands.</p>
-      <p>📬 Email brands directly using this template: "I love your products, but your shade range excludes many people. Please consider expanding it. Representation matters." </p>
-      <p>📎 <a href="https://forms.gle/yourformlink">Submit your story here</a> to be featured!</p>
+    <div class="card get-involved">
+      <p>📢 Use the hashtag <strong>#WhereIsMyShade</strong> to share your story on social media and demand accountability.</p>
+      <p>📬 Email brands using this template: <em>“Your products are beautiful, but your shade range doesn’t reflect real-world diversity. Please consider expanding your offerings.”</em></p>
+      <p>📎 <a href="https://forms.gle/yourformlink">Submit your experience here</a> to be featured on our page.</p>
     </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 Unseen Shades by Jada Ofili. All rights reserved.</p>
+    <p>&copy; 2025 Unseen Shades by Jada Ofili. Designed to uplift, include, and empower. All rights reserved.</p>
   </footer>
 </body>
 </html>
